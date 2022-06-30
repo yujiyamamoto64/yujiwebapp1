@@ -13,7 +13,7 @@ public class Yujiwebapp1Application {
 	@RequestMapping("/")
 	@ResponseBody
 	String home() {
-		return "Hello World!";
+		return "Hello World!  modified: 22063012h25";
 	}
 
 	public static void main(String[] args) {
