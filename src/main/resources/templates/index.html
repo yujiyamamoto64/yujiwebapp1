@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!----======== CSS ======== -->
-<link rel="stylesheet" href="..\static\style.css">
+<link rel="stylesheet" th:href="@{style.css}">
 
 <!----===== Boxicons CSS ===== -->
-<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' 
+<link th:href="@{https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css}" 
 rel='stylesheet'>
 
 <title>Dashboard Sidebar Menu</title>
@@ -21,7 +21,7 @@ rel='stylesheet'>
 		<header>
 			<div class="image-text">
 				<span class="image"> 
-				<img src="yuji.png" alt="profile picture" />
+				<img th:src="@{/yuji.png}" >
 				</span>
 
 				<div class="text logo-text">
