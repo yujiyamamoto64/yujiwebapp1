@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!----======== CSS ======== -->
+<link rel="stylesheet" href="..\static\style.css">
+
+<!----===== Boxicons CSS ===== -->
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' 
+rel='stylesheet'>
+
+<title>Dashboard Sidebar Menu</title>
+</head>
+
+<body>
+	<nav class="sidebar close">
+		<header>
+			<div class="image-text">
+				<span class="image"> 
+				<img src="yuji.png" alt="profile picture" />
+				</span>
+
+				<div class="text logo-text">
+					<span class="name">Yuji Yamamoto</span> <span class="profession">Spring
+						Developer</span>
+				</div>
+			</div>
+
+			<i class='bx bx-chevron-right toggle'></i>
+		</header>
+
+		<div class="menu-bar">
+			<div class="menu">
+
+				<li class="search-box"><i class='bx bx-search icon'></i> 
+				<input type="text" placeholder="Search...">
+				</li>
+
+				<ul class="menu-links">
+					<li class="nav-link"><a href="#"> <i
+							class='bx bx-hard-hat icon'> </i> <span class="text nav-text">Home</span>
+					</a></li>
+
+					<li class="nav-link"><a href="#"> <i
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">App1</span>
+					</a></li>
+
+					<li class="nav-link"><a href="#"> <i
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+					</a></li>
+
+					<li class="nav-link"><a href="#"> <i
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+					</a></li>
+
+					<li class="nav-link"><a href="#"> <i
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+					</a></li>
+
+					<li class="nav-link"><a href="#"> <i
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+					</a></li>
+
+				</ul>
+			</div>
+
+			<div class="bottom-content">
+				<li class=""><a href="#"> <i class='bx bx-hard-hat icon'></i><span
+						class="text nav-text">  Building...</span></a></li>
+
+				<li class="mode">
+					<div class="sun-moon">
+						<i class='bx bx-moon icon moon'></i> <i class='bx bx-sun icon sun'></i>
+					</div> <span class="mode-text text">Dark mode</span>
+
+					<div class="toggle-switch">
+						<span class="switch"></span>
+					</div>
+				</li>
+
+			</div>
+		</div>
+
+	</nav>
+
+	<section class="home">
+		<div class="text">Yuji Yamamoto</div>
+	</section>
+
+	<script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+
+
+</body>
+</html>
