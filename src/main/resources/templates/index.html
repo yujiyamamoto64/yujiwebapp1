@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-
-
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+
+<head th:fragment="head">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <!----======== CSS ======== -->
 <link rel="stylesheet" th:href="@{style.css}">
-
 <!----===== Boxicons CSS ===== -->
-<link th:href="@{https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css}" 
-rel='stylesheet'>
+<link th:href="@{https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css}"
+	rel='stylesheet'>
 
 <title>Dashboard Sidebar Menu</title>
 </head>
 
 <body>
-	<nav class="sidebar close">
+
+	<nav th:fragment="sidebar" class="sidebar close">
 		<header>
 			<div class="image-text">
-				<span class="image"> 
-				<img th:src="@{/yuji.png}" >
+				<span class="image"> <img th:src="@{/yuji.png}">
 				</span>
 
 				<div class="text logo-text">
@@ -36,9 +33,8 @@ rel='stylesheet'>
 		<div class="menu-bar">
 			<div class="menu">
 
-				<li class="search-box"><i class='bx bx-search icon'></i> 
-				<input type="text" placeholder="Search...">
-				</li>
+				<li class="search-box"><i class='bx bx-search icon'></i> <input
+					type="text" placeholder="Search..."></li>
 
 				<ul class="menu-links">
 					<li class="nav-link"><a th:href="@{/}"> <i
@@ -50,19 +46,23 @@ rel='stylesheet'>
 					</a></li>
 
 					<li class="nav-link"><a href="#"> <i
-							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">
+								Building...</span>
 					</a></li>
 
 					<li class="nav-link"><a href="#"> <i
-							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">
+								Building...</span>
 					</a></li>
 
 					<li class="nav-link"><a href="#"> <i
-							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">
+								Building...</span>
 					</a></li>
 
 					<li class="nav-link"><a href="#"> <i
-							class='bx bx-hard-hat icon'></i> <span class="text nav-text">  Building...</span>
+							class='bx bx-hard-hat icon'></i> <span class="text nav-text">
+								Building...</span>
 					</a></li>
 
 				</ul>
@@ -70,7 +70,7 @@ rel='stylesheet'>
 
 			<div class="bottom-content">
 				<li class=""><a href="#"> <i class='bx bx-hard-hat icon'></i><span
-						class="text nav-text">  Building...</span></a></li>
+						class="text nav-text"> Building...</span></a></li>
 
 				<li class="mode">
 					<div class="sun-moon">
@@ -87,11 +87,12 @@ rel='stylesheet'>
 
 	</nav>
 
+
 	<section class="home">
 		<div class="text">Yuji Yamamoto</div>
 	</section>
 
-	<script>
+	<script th:fragment="script">
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
       toggle = body.querySelector(".toggle"),
